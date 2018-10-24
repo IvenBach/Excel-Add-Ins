@@ -19,8 +19,8 @@ Requests from co-workers or things that irritated me about Excel are bundled int
 Allows single click access to commands to built in commands. Instead of having to go through multiple windows they are now immediately accessible
  - R1C1 Reference Style
  - Display Page Break
- - Freeze/Re-Freese on ActiveCell
- - UnfreesePanes
+ - Freeze/Re-Freeze on ActiveCell
+ - UnfreezePanes
  
 Allows you to do things that by default aren't avalible.
  - Range Offset group (Left, Right, Up, Down)
