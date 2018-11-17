@@ -5,7 +5,7 @@ To use these Add-ins you'll need to go to File>Options>Add-Ins>Manage: Excel Add
 
 ## SubSuperScripting
 
-![](images/SubSuperScripting.png)
+![](SubSuperScripting/SubSuperScripting.png)
 
 This add-in will allow easier sub and super scripting of text. Examples are when working with chemical equations such as CO<sub>2</sub>. It's tedious to continually have to go back and forth adding and removing the scripting effect to the characters of the cell. Wrapping text with the default strings of `_` and `^` results in the surrounded text having the correct scripting added. Alternate characters can be chosen as well.
  - Carbon Dioxide (CO2) would be written as CO_2_ and become CO<sub>2</sub>
@@ -14,7 +14,7 @@ This add-in will allow easier sub and super scripting of text. Examples are when
 ## Ribbon UI Modifications
 Requests from co-workers or things that irritated me about Excel are bundled into this Add-in.
 
-![](images/Ribbon%20UI%20Modifications.png)
+![](CPCustomization/Ribbon%20UI%20Modifications.png)
 
 Allows single click access to commands to built in commands. Instead of having to go through multiple windows they are now immediately accessible
  - R1C1 Reference Style
