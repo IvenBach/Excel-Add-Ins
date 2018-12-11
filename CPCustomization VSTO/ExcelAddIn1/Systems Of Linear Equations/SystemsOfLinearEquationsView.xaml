@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="ExcelAddIn1.Systems_Of_Linear_Equations.SystemsOfLinearEquationsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExcelAddIn1.Systems_Of_Linear_Equations"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0"
+                    Orientation="Horizontal">
+            <Label Content="Coefficient Matrix"/>
+            <TextBox Width="50"></TextBox>
+        </StackPanel>
+
+    </Grid>
+</UserControl>

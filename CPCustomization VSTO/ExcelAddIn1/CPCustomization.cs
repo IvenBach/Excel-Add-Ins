@@ -272,5 +272,11 @@ namespace ExcelAddIn1
             Up,
             Down
         }
+
+        private void SolveSystemOfLinearEquations_Click(object sender, RibbonControlEventArgs e)
+        {
+            Systems_Of_Linear_Equations.SystemsOfEquationsView view = new Systems_Of_Linear_Equations.SystemsOfEquationsView();
+            view.Show();
+        }
     }
 }
