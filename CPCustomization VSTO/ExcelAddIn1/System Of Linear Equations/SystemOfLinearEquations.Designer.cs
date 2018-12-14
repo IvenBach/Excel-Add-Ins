@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExcelAddIn1.Systems_Of_Linear_Equations {
+namespace ExcelAddIn1.System_Of_Linear_Equations {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ExcelAddIn1.Systems_Of_Linear_Equations {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExcelAddIn1.Systems_Of_Linear_Equations.SystemOfLinearEquations", typeof(SystemOfLinearEquations).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExcelAddIn1.System_Of_Linear_Equations.SystemOfLinearEquations", typeof(SystemOfLinearEquations).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,42 @@ namespace ExcelAddIn1.Systems_Of_Linear_Equations {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answer vector rows must match coefficient matrix columns.
+        /// </summary>
+        internal static string AnswerVectorMustMatchCoeffMatrixColumns {
+            get {
+                return ResourceManager.GetString("AnswerVectorMustMatchCoeffMatrixColumns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Answer vector must contain only one column.
+        /// </summary>
+        internal static string AnswerVectorSingleColumn {
+            get {
+                return ResourceManager.GetString("AnswerVectorSingleColumn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Invalid input.
+        /// </summary>
+        internal static string InvalidInputCaption {
+            get {
+                return ResourceManager.GetString("InvalidInputCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inputs need to be valid, correct cell references before continuing..
+        /// </summary>
+        internal static string InvalidInputText {
+            get {
+                return ResourceManager.GetString("InvalidInputText", resourceCulture);
             }
         }
         
@@ -88,29 +124,11 @@ namespace ExcelAddIn1.Systems_Of_Linear_Equations {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to A non-square matrix cannot be solved for.
+        ///   Looks up a localized string similar to A non-square coefficient matrix cannot be solved for.
         /// </summary>
         internal static string NonSquareMatrixText {
             get {
                 return ResourceManager.GetString("NonSquareMatrixText", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Right-hand-side-vector rows must match coefficient matrix columns.
-        /// </summary>
-        internal static string RightHandSideVectorMustMatchCoeffMatrixColumns {
-            get {
-                return ResourceManager.GetString("RightHandSideVectorMustMatchCoeffMatrixColumns", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Right-hand-side-vector must contain only one column.
-        /// </summary>
-        internal static string RightHandSideVectorSingleColumn {
-            get {
-                return ResourceManager.GetString("RightHandSideVectorSingleColumn", resourceCulture);
             }
         }
         

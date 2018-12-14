@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AnswerVectorMustMatchCoeffMatrixColumns" xml:space="preserve">
+    <value>Answer vector rows must match coefficient matrix columns</value>
+  </data>
+  <data name="AnswerVectorSingleColumn" xml:space="preserve">
+    <value>Answer vector must contain only one column</value>
+  </data>
+  <data name="InvalidInputCaption" xml:space="preserve">
+    <value>Invalid input</value>
+  </data>
+  <data name="InvalidInputText" xml:space="preserve">
+    <value>Inputs need to be valid, correct cell references before continuing.</value>
+  </data>
   <data name="NonSingularMatrixCaption" xml:space="preserve">
     <value>Non-singular matrix</value>
   </data>
@@ -127,13 +139,7 @@
     <value>Non-square matrix</value>
   </data>
   <data name="NonSquareMatrixText" xml:space="preserve">
-    <value>A non-square matrix cannot be solved for</value>
-  </data>
-  <data name="RightHandSideVectorMustMatchCoeffMatrixColumns" xml:space="preserve">
-    <value>Right-hand-side-vector rows must match coefficient matrix columns</value>
-  </data>
-  <data name="RightHandSideVectorSingleColumn" xml:space="preserve">
-    <value>Right-hand-side-vector must contain only one column</value>
+    <value>A non-square coefficient matrix cannot be solved for</value>
   </data>
   <data name="SelectValidInputs" xml:space="preserve">
     <value>Please select valid values for inputs and outputs</value>

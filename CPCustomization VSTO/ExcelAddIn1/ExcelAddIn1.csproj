@@ -197,6 +197,8 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="System Of Linear Equations\ISystemsOfEquationsView.cs" />
+    <Compile Include="Utility\CheckDestination.cs" />
     <EmbeddedResource Include="CPCustomization.resx">
       <DependentUpon>CPCustomization.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,11 +211,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Systems Of Linear Equations\SystemOfLinearEquations.resx">
+    <EmbeddedResource Include="System Of Linear Equations\SystemOfLinearEquations.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SystemOfLinearEquations.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Systems Of Linear Equations\SystemsOfEquationsView.resx">
+    <EmbeddedResource Include="System Of Linear Equations\SystemsOfEquationsView.resx">
       <DependentUpon>SystemsOfEquationsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI Resources.resx">
@@ -234,20 +236,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="Systems Of Linear Equations\SystemOfLinearEquations.Designer.cs">
+    <Compile Include="System Of Linear Equations\SystemOfLinearEquations.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>SystemOfLinearEquations.resx</DependentUpon>
     </Compile>
-    <Compile Include="Systems Of Linear Equations\SystemOfLinearEquationsModel.cs" />
-    <Compile Include="Systems Of Linear Equations\SystemsOfEquationsView.cs">
+    <Compile Include="System Of Linear Equations\SystemOfLinearEquationsModel.cs" />
+    <Compile Include="System Of Linear Equations\SystemsOfEquationsPresenter.cs" />
+    <Compile Include="System Of Linear Equations\SystemsOfEquationsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Systems Of Linear Equations\SystemsOfEquationsView.Designer.cs">
+    <Compile Include="System Of Linear Equations\SystemsOfEquationsView.Designer.cs">
       <DependentUpon>SystemsOfEquationsView.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Systems Of Linear Equations\SystemsOfLinearEquationsView.xaml.cs">
-      <DependentUpon>SystemsOfLinearEquationsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="UI Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -279,12 +279,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SystemOfLinearEquations.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Systems Of Linear Equations\SystemsOfLinearEquationsView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

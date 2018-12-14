@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Microsoft.Office.Tools.Ribbon;
 using XL = Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
+using ExcelAddIn1.Utility;
 
 namespace ExcelAddIn1
 {
@@ -167,7 +167,7 @@ namespace ExcelAddIn1
 
             destination = destination.Resize[uniqueValues.Count];
             
-            if (WillOverwriteCells(destination))
+            if (CheckDestination.WillOverwriteInformation(destination))
             {
                 var result = MessageBox.Show(string.Format(List_From_Selection.OverwriteMessage,Environment.NewLine), 
                     List_From_Selection.OverwriteTitle, MessageBoxButtons.YesNo);
@@ -179,39 +179,6 @@ namespace ExcelAddIn1
             
             destination.Value2 = xlApplication.WorksheetFunction.Transpose(uniqueValues.ToArray());
             destination.BorderAround2(XL.XlLineStyle.xlContinuous);
-        }
-
-        private bool WillOverwriteCells(XL.Range destination)
-        {
-            bool overwritesFormulas;
-            bool overwritesConstants;
-            if (destination.Cells.Count == 1)
-            {
-                overwritesFormulas = destination.HasFormula;
-                overwritesConstants = destination.Value2 != string.Empty;
-            }
-            else
-            {
-                try
-                {
-                    overwritesFormulas = destination.SpecialCells(XL.XlCellType.xlCellTypeFormulas).Count > 0;
-                }
-                catch (System.Runtime.InteropServices.COMException ex)
-                {
-                    overwritesFormulas = false;
-                }
-
-                try
-                {
-                    overwritesConstants = destination.SpecialCells(XL.XlCellType.xlCellTypeConstants).Count > 0;
-                }
-                catch (System.Runtime.InteropServices.COMException ex)
-                {
-                    overwritesConstants = false;
-                }
-            }
-
-            return overwritesConstants || overwritesFormulas;
         }
 
         private List<string> UniqueCellValues(XL.Range selection)
@@ -273,10 +240,11 @@ namespace ExcelAddIn1
             Down
         }
 
+        private System_Of_Linear_Equations.SystemsOfEquationsPresenter presenter = new System_Of_Linear_Equations.SystemsOfEquationsPresenter();
         private void SolveSystemOfLinearEquations_Click(object sender, RibbonControlEventArgs e)
         {
-            Systems_Of_Linear_Equations.SystemsOfEquationsView view = new Systems_Of_Linear_Equations.SystemsOfEquationsView();
-            view.Show();
+            presenter.View.Hide();
+            presenter.View.Show();
         }
     }
 }
