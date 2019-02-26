@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using XL = Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 using System.Drawing;
 using System.Windows.Forms;
 using ExcelAddIn1.Utility;
@@ -21,7 +21,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
             View = new SystemsOfEquationsView(this);
         }
 
-        public void SetCoefficientMatrix(XL.Range coefficientMatrix)
+        public void SetCoefficientMatrix(Excel.Range coefficientMatrix)
         {
             if (coefficientMatrix != null)
             {
@@ -29,7 +29,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
             }
         }
 
-        public void SetAnswerVector(XL.Range answerVector)
+        public void SetAnswerVector(Excel.Range answerVector)
         {
             if (answerVector != null)
             {
@@ -37,13 +37,13 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
             }
         }
 
-        public void SetInverseCoefficientMatrix(XL.Range inverseCoefficientMatrix)
+        public void SetInverseCoefficientMatrix(Excel.Range inverseCoefficientMatrix)
         {
             Model.InverseCoefficientMatrix = inverseCoefficientMatrix;
 
         }
 
-        public void SetSolutionVector(XL.Range solutionVector)
+        public void SetSolutionVector(Excel.Range solutionVector)
         {
             if (solutionVector != null)
             {

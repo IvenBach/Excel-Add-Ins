@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
-using XL = Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
 
@@ -25,7 +25,7 @@ namespace ExcelAddIn1
             Application.WorkbookActivate -= Application_WorkbookActivate;
         }
 
-        private void Application_WorkbookActivate(XL.Workbook Wb)
+        private void Application_WorkbookActivate(Excel.Workbook Wb)
         {
             SynchronizeUI(Wb.ActiveSheet);
         }
@@ -47,14 +47,14 @@ namespace ExcelAddIn1
 
         private static void SynchronizeDisplayGroup(CPCustomization cpRibbon, object sheet)
         {
-            cpRibbon.R1C1ReferenceStyle.Checked = Globals.ThisAddIn.Application.ReferenceStyle == XL.XlReferenceStyle.xlR1C1;
-            cpRibbon.StructuredTableReferences.Checked = Globals.ThisAddIn.Application.GenerateTableRefs == XL.XlGenerateTableRefs.xlGenerateTableRefStruct;
+            cpRibbon.R1C1ReferenceStyle.Checked = Globals.ThisAddIn.Application.ReferenceStyle == Excel.XlReferenceStyle.xlR1C1;
+            cpRibbon.StructuredTableReferences.Checked = Globals.ThisAddIn.Application.GenerateTableRefs == Excel.XlGenerateTableRefs.xlGenerateTableRefStruct;
 
-            var isEnabled = sheet is XL.Worksheet;
+            var isEnabled = sheet is Excel.Worksheet;
             cpRibbon.DisplayPageBreaks.Enabled = isEnabled;
             try
             {
-                cpRibbon.DisplayPageBreaks.Checked = ((XL.Worksheet)sheet)?.DisplayPageBreaks ?? false;
+                cpRibbon.DisplayPageBreaks.Checked = ((Excel.Worksheet)sheet)?.DisplayPageBreaks ?? false;
             }
             catch (InvalidCastException ex)
             {
@@ -64,7 +64,7 @@ namespace ExcelAddIn1
 
         private static void ToggleSelectionDependentGroup(Microsoft.Office.Tools.Ribbon.RibbonGroup ribbonGroup, object sheet)
         {
-            var isEnabled = sheet is XL.Worksheet;
+            var isEnabled = sheet is Excel.Worksheet;
             foreach (var item in ribbonGroup.Items)
             {
                 item.Enabled = isEnabled;

@@ -130,6 +130,18 @@
   <data name="OffsetUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\OffsetUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ResizeDown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ResizeDown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResizeLeft" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ResizeLeft.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResizeRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ResizeRight.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResizeUp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ResizeUp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SystemOfLinearEquations" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SystemOfLinearEquations.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

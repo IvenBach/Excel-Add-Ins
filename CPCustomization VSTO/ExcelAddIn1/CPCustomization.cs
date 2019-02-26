@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Office.Tools.Ribbon;
-using XL = Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 using System.Windows.Forms;
 using ExcelAddIn1.Utility;
+using ExcelAddIn1.SelectionModifications;
 
 namespace ExcelAddIn1
 {
     public partial class CPCustomization
     {
-        XL.Application xlApplication;
+        Excel.Application xlApplication;
         
         private void FooRibbon_Load(object sender, RibbonUIEventArgs e)
         {
@@ -63,9 +64,9 @@ namespace ExcelAddIn1
             selection.Offset[0, 1].Select();
         }
 
-        private bool IsSelectedCellsOnBoundaryOfWorksheet(XL.Range selection, OffsetDirection direction)
+        private bool IsSelectedCellsOnBoundaryOfWorksheet(Excel.Range selection, OffsetDirection direction)
         {
-            foreach (XL.Range subArea in selection.Areas)
+            foreach (Excel.Range subArea in selection.Areas)
             {
                 if (direction == OffsetDirection.Left
                     && subArea.Column == 1)
@@ -95,20 +96,20 @@ namespace ExcelAddIn1
             return false;
         }
 
-        private XL.Range CurrentSelection => xlApplication.ActiveWindow.RangeSelection;
-
+        private Excel.Range CurrentSelection => xlApplication.ActiveWindow.RangeSelection;
+        
         private void R1C1ReferenceStyle_Click(object sender, RibbonControlEventArgs e)
         {
             var checkBox = sender as RibbonCheckBox;
 
             xlApplication.ReferenceStyle = checkBox.Checked
-                ? XL.XlReferenceStyle.xlR1C1
-                : XL.XlReferenceStyle.xlA1;
+                ? Excel.XlReferenceStyle.xlR1C1
+                : Excel.XlReferenceStyle.xlA1;
         }
 
         private void DisplayPageBreaks_Click(object sender, RibbonControlEventArgs e)
         {
-            if (xlApplication.ActiveSheet is XL.Worksheet activeSheet)
+            if (xlApplication.ActiveSheet is Excel.Worksheet activeSheet)
             {
                 activeSheet.DisplayPageBreaks = ((RibbonCheckBox)sender).Checked;
             }            
@@ -117,8 +118,8 @@ namespace ExcelAddIn1
         private void TableStructureReference_Click(object sender, RibbonControlEventArgs e)
         {
             xlApplication.GenerateTableRefs = ((RibbonCheckBox)sender).Checked
-                ? XL.XlGenerateTableRefs.xlGenerateTableRefStruct
-                : XL.XlGenerateTableRefs.xlGenerateTableRefA1;
+                ? Excel.XlGenerateTableRefs.xlGenerateTableRefStruct
+                : Excel.XlGenerateTableRefs.xlGenerateTableRefA1;
         }
 
         private void FreezeReFreezePanes_Click(object sender, RibbonControlEventArgs e)
@@ -159,7 +160,7 @@ namespace ExcelAddIn1
             }
 
             var testDestination = xlApplication.InputBox(List_From_Selection.ChooseListDestination, List_From_Selection.ListLocation, Type: 8);
-            if (!(testDestination is XL.Range destination))
+            if (!(testDestination is Excel.Range destination))
             { 
                 MessageBox.Show(List_From_Selection.NoDestinationChosen, List_From_Selection.ListNotCreated, MessageBoxButtons.OK);
                 return;
@@ -178,13 +179,13 @@ namespace ExcelAddIn1
             }
             
             destination.Value2 = xlApplication.WorksheetFunction.Transpose(uniqueValues.ToArray());
-            destination.BorderAround2(XL.XlLineStyle.xlContinuous);
+            destination.BorderAround2(Excel.XlLineStyle.xlContinuous);
         }
 
-        private List<string> UniqueCellValues(XL.Range selection)
+        private List<string> UniqueCellValues(Excel.Range selection)
         {
             var uniqueValues = new List<string>();
-            foreach (XL.Range cell in selection.Cells)
+            foreach (Excel.Range cell in selection.Cells)
             {
                 if (!uniqueValues.Contains(cell.Value2) && cell.Value2 != string.Empty && cell.Value2 != null)
                 {
@@ -197,17 +198,17 @@ namespace ExcelAddIn1
 
         private void TextualNumbersToNumbers_Click(object sender, RibbonControlEventArgs e)
         {
-            foreach (XL.Range subArea in CurrentSelection.Areas)
+            foreach (Excel.Range subArea in CurrentSelection.Areas)
             {
                 ConvertToNumber(subArea);
             }
         }
 
-        private void ConvertToNumber(XL.Range subArea)
+        private void ConvertToNumber(Excel.Range subArea)
         {
             if (subArea.Cells.Count > 1)
             {
-                foreach (XL.Range cell in subArea.Cells)
+                foreach (Excel.Range cell in subArea.Cells)
                 {
                     CheckAndConvert(cell);
                 }
@@ -217,7 +218,7 @@ namespace ExcelAddIn1
                 CheckAndConvert(subArea);
             }
 
-            void CheckAndConvert(XL.Range cell)
+            void CheckAndConvert(Excel.Range cell)
             {
                 if (cell.Value2 == null
                     || cell.Value2.GetType().Name.Equals("Double"))
@@ -245,6 +246,26 @@ namespace ExcelAddIn1
         {
             presenter.View.Hide();
             presenter.View.Show();
+        }
+
+        private void ResizeDecreaseColumn_Click(object sender, RibbonControlEventArgs e)
+        {
+            Resize.DecreaseColumn(xlApplication);
+        }
+
+        private void ResizeIncreaseColumn_Click(object sender, RibbonControlEventArgs e)
+        {
+            Resize.IncreaseColumn(xlApplication);
+        }
+
+        private void ResizeDecreaseRow_Click(object sender, RibbonControlEventArgs e)
+        {
+            Resize.DecreaseRow(xlApplication);
+        }
+
+        private void ResizeIncreaseRow_Click(object sender, RibbonControlEventArgs e)
+        {
+            Resize.IncreaseRow(xlApplication);
         }
     }
 }

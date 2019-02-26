@@ -160,6 +160,25 @@ namespace ExcelAddIn1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Part of your selection has only 1 Column and/or Row.
+        ///You cannot further decrease the selection..
+        /// </summary>
+        internal static string ResizeSelection_LastRowColumnError {
+            get {
+                return ResourceManager.GetString("ResizeSelection_LastRowColumnError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to There is no active window. Please have a workbook open before using this functionality..
+        /// </summary>
+        internal static string ResizeSelection_NoActiveWindow {
+            get {
+                return ResourceManager.GetString("ResizeSelection_NoActiveWindow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Structured Table References.
         /// </summary>
         internal static string StructuredTableReferences {

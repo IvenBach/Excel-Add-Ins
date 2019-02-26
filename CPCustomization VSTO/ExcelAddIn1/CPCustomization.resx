@@ -118,7 +118,19 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="offsetLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="SolveSystemOfLinearEquations.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAE7SURBVEhLxZXbFQMhCERTlwVZz1aTZlLMhkHA57qSmJP5
+        MKADl/ixPs4fC4AHK+W7ZD0FwJub9RfA6wiUxKekz1hmA5V+NkNaQCFWi0jkDzGGZKEkHtRgAqj8ScBI
+        2gPgP16YSivKuFfv5wLa47gDJH/VtSpu1fsxvrbvAfBlpYoZoPNT+9ydRLtYLSp68UXi/kVVnarxh5B5
+        aZ8CrBZt1xJgzl45vQGoBld0KwegN/DODdUB+ExugBQsT+MGeOUGSMHyNG6AVw5Ab1iZyQH4TEuAOXvl
+        9AbwjUYAfBaT9APKO+MvdmO2VN0UYrUIIhOO9Rmg38mr2ZiTgJHsAiCykus3Z2Bmt/55OsBqESRDlV2n
+        gMYMZH6ctgMor56+C4DISkVVaVJtLrwyEAVYLdquCrCdYT1/MnvWeb4BJhTZF9TOSokAAAAASUVORK5C
+        YII=
+</value>
+  </data>
+  <data name="OffsetLeft.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAACYktHRAD/h4/MvwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yOFQxMjo0NDo0NC0wNTow
@@ -130,7 +142,7 @@
         TW/uJhbcqDhq7AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="offsetUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="OffsetUp.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAACYktHRAD/h4/MvwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yOFQxMjo0NTo0MS0wNTow
@@ -143,7 +155,7 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <data name="offsetRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="OffsetRight.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAACYktHRAD/h4/MvwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yOFQxMjo0NToxMi0wNTow
@@ -155,7 +167,7 @@
         qKBlVNAyKpltewNguBbcOf7rYwAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="offsetDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="OffsetDown.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAYAAACoPemuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAACYktHRAD/h4/MvwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAxOC0wNi0yOFQxMjo0MzowOS0wNTow
@@ -165,18 +177,6 @@
         Gp2YG9JGRGl0Ym5IGxGl0Ym5IW1ElEYn5oYc03/8UxqdSK0TA/qI0uhEap1YoAdFGrwiNUGkPKK4074n
         TymPKeiw78gR5ScKP7H35SXKzzRwx96VtygRGrpi78lHlBgNTuwdaaFEafjM/r+0UuJ0ANn/k2+hjNAh
         2f5evpUyRge97O/kv1BGVznqoIyvctQBHZL9KHTQyyVY8qiDJY8ys22/1fYW3BsshYsAAAAASUVORK5C
-        YII=
-</value>
-  </data>
-  <data name="SolveSystemOfLinearEquations.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADrwAAA68AZW8ckkAAAE7SURBVEhLxZXbFQMhCERTlwVZz1aTZlLMhkHA57qSmJP5
-        MKADl/ixPs4fC4AHK+W7ZD0FwJub9RfA6wiUxKekz1hmA5V+NkNaQCFWi0jkDzGGZKEkHtRgAqj8ScBI
-        2gPgP16YSivKuFfv5wLa47gDJH/VtSpu1fsxvrbvAfBlpYoZoPNT+9ydRLtYLSp68UXi/kVVnarxh5B5
-        aZ8CrBZt1xJgzl45vQGoBld0KwegN/DODdUB+ExugBQsT+MGeOUGSMHyNG6AVw5Ab1iZyQH4TEuAOXvl
-        9AbwjUYAfBaT9APKO+MvdmO2VN0UYrUIIhOO9Rmg38mr2ZiTgJHsAiCykus3Z2Bmt/55OsBqESRDlV2n
-        gMYMZH6ctgMor56+C4DISkVVaVJtLrwyEAVYLdquCrCdYT1/MnvWeb4BJhTZF9TOSokAAAAASUVORK5C
         YII=
 </value>
   </data>

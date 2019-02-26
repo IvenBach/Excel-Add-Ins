@@ -25,7 +25,7 @@
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
     <RootNamespace>ExcelAddIn1</RootNamespace>
-    <AssemblyName>ExcelAddIn1</AssemblyName>
+    <AssemblyName>CPCustomization</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <DefineConstants>VSTO40</DefineConstants>
     <IsWebBootstrapper>False</IsWebBootstrapper>
@@ -38,7 +38,7 @@
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
     <UpdateIntervalUnits>days</UpdateIntervalUnits>
-    <ProductName>ExcelAddIn1</ProductName>
+    <ProductName>CPCustomization</ProductName>
     <PublisherName />
     <SupportUrl />
     <FriendlyName>ExcelAddIn1</FriendlyName>
@@ -197,8 +197,10 @@
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SelectionModifications\Resize.cs" />
     <Compile Include="System Of Linear Equations\ISystemsOfEquationsView.cs" />
     <Compile Include="Utility\CheckDestination.cs" />
+    <Compile Include="Utility\CurrentSelection.cs" />
     <EmbeddedResource Include="CPCustomization.resx">
       <DependentUpon>CPCustomization.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +281,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SystemOfLinearEquations.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\ResizeDown.png" />
+    <Content Include="Resources\ResizeLeft.png" />
+    <Content Include="Resources\ResizeRight.png" />
+    <Content Include="Resources\ResizeUp.png" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

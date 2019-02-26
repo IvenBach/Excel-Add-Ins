@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-using XL = Microsoft.Office.Interop.Excel;
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ExcelAddIn1.System_Of_Linear_Equations
 {
@@ -63,7 +63,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
             Hide();
 
             dynamic unsafeCoefficientMatrix = Globals.ThisAddIn.Application.InputBox("Select coefficient matrix range", "Coefficient Matrix", Type: RangeSelectionConst);
-            if (unsafeCoefficientMatrix is XL.Range)
+            if (unsafeCoefficientMatrix is Excel.Range)
             {
                 Presenter.Model.CoefficientMatrix = unsafeCoefficientMatrix;
                 CoefficientMatrixDisplay.Text = Presenter.Model.CoefficientMatrix.Address[false, false];
@@ -81,7 +81,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
             Hide();
 
             dynamic unsafeRHSVector = Globals.ThisAddIn.Application.InputBox("Select answer vector", "Answer vector", Type: RangeSelectionConst);
-            if (unsafeRHSVector is XL.Range)
+            if (unsafeRHSVector is Excel.Range)
             {
                 Presenter.Model.AnswerVector = unsafeRHSVector;
                 AnswerVectorDisplay.Text = Presenter.Model.AnswerVector.Address[false, false];
@@ -99,7 +99,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
             Hide();
 
             dynamic unsafeInverceCoefficient = Globals.ThisAddIn.Application.InputBox("Select coefficient matrix", "Coefficient matrix", Type: RangeSelectionConst);
-            if (unsafeInverceCoefficient is XL.Range)
+            if (unsafeInverceCoefficient is Excel.Range)
             {
                 Presenter.Model.InverseCoefficientMatrix = unsafeInverceCoefficient;
                 InverseCoefficientMatrixDisplay.Text = Presenter.Model.InverseCoefficientMatrix.Address[false, false];
@@ -117,7 +117,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
             Hide();
 
             dynamic unsafeSolutionVector = Globals.ThisAddIn.Application.InputBox("Select solution vector", "Solution vector", Type: RangeSelectionConst);
-            if (unsafeSolutionVector is XL.Range)
+            if (unsafeSolutionVector is Excel.Range)
             {
                 Presenter.Model.SolutionVector = unsafeSolutionVector;
                 SolutionVectorDisplay.Text = Presenter.Model.SolutionVector.Address[false, false];

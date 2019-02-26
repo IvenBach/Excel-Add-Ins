@@ -150,6 +150,13 @@
   <data name="ReFreezeOnActiveCell" xml:space="preserve">
     <value>Re-Freeze on ActiveCell</value>
   </data>
+  <data name="ResizeSelection_LastRowColumnError" xml:space="preserve">
+    <value>Part of your selection has only 1 Column and/or Row.
+You cannot further decrease the selection.</value>
+  </data>
+  <data name="ResizeSelection_NoActiveWindow" xml:space="preserve">
+    <value>There is no active window. Please have a workbook open before using this functionality.</value>
+  </data>
   <data name="StructuredTableReferences" xml:space="preserve">
     <value>Structured Table References</value>
   </data>
