@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ExcelAddIn1.Properties {
+namespace ExcelAddIn1.System_Of_Linear_Equations {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace ExcelAddIn1.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class SystemOfLinearEquations {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal SystemOfLinearEquations() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace ExcelAddIn1.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExcelAddIn1.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ExcelAddIn1.System_Of_Linear_Equations.SystemOfLinearEquations", typeof(SystemOfLinearEquations).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,52 +61,83 @@ namespace ExcelAddIn1.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Answer vector rows must match coefficient matrix columns.
         /// </summary>
-        internal static System.Drawing.Bitmap OffsetDown {
+        internal static string AnswerVectorMustMatchCoeffMatrixColumns {
             get {
-                object obj = ResourceManager.GetObject("OffsetDown", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("AnswerVectorMustMatchCoeffMatrixColumns", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Answer vector must contain only one column.
         /// </summary>
-        internal static System.Drawing.Bitmap OffsetLeft {
+        internal static string AnswerVectorSingleColumn {
             get {
-                object obj = ResourceManager.GetObject("OffsetLeft", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("AnswerVectorSingleColumn", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Invalid input.
         /// </summary>
-        internal static System.Drawing.Bitmap OffsetRight {
+        internal static string InvalidInputCaption {
             get {
-                object obj = ResourceManager.GetObject("OffsetRight", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("InvalidInputCaption", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Inputs need to be valid, correct cell references before continuing..
         /// </summary>
-        internal static System.Drawing.Bitmap OffsetUp {
+        internal static string InvalidInputText {
             get {
-                object obj = ResourceManager.GetObject("OffsetUp", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("InvalidInputText", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Non-singular matrix.
         /// </summary>
-        internal static System.Drawing.Bitmap SystemOfLinearEquations {
+        internal static string NonSingularMatrixCaption {
             get {
-                object obj = ResourceManager.GetObject("SystemOfLinearEquations", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("NonSingularMatrixCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Matrix is non - singular and cannot be solved for.
+        /// </summary>
+        internal static string NonSingularMatrixText {
+            get {
+                return ResourceManager.GetString("NonSingularMatrixText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Non-square matrix.
+        /// </summary>
+        internal static string NonSquareMatrixCaption {
+            get {
+                return ResourceManager.GetString("NonSquareMatrixCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to A non-square coefficient matrix cannot be solved for.
+        /// </summary>
+        internal static string NonSquareMatrixText {
+            get {
+                return ResourceManager.GetString("NonSquareMatrixText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select valid values for inputs and outputs.
+        /// </summary>
+        internal static string SelectValidInputs {
+            get {
+                return ResourceManager.GetString("SelectValidInputs", resourceCulture);
             }
         }
     }
