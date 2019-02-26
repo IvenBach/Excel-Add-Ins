@@ -203,5 +203,15 @@ namespace ExcelAddIn1
         {
             Resize.IncreaseRow(xlApplication);
         }
+
+        private void FillWithR1C1_Click(object sender, RibbonControlEventArgs e)
+        {
+            _currentSelection.Formula = "=\"R\"&ROW()&\"C\"&COLUMN()";
+
+            foreach (Excel.Range subArea in _currentSelection.Areas)
+            {
+                subArea.Value2 = subArea.Value2;
+            }
+        }
     }
 }
