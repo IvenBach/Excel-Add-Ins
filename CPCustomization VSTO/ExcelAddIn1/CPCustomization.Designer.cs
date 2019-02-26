@@ -49,6 +49,7 @@
             this.separator2 = this.Factory.CreateRibbonSeparator();
             this.ListFromSelection = this.Factory.CreateRibbonButton();
             this.TextualNumbersToNumbers = this.Factory.CreateRibbonButton();
+            this.FillWithR1C1 = this.Factory.CreateRibbonButton();
             this.GroupView = this.Factory.CreateRibbonGroup();
             this.FreezeReFreezePanes = this.Factory.CreateRibbonButton();
             this.UnFreezePanes = this.Factory.CreateRibbonButton();
@@ -63,7 +64,6 @@
             this.separator3 = this.Factory.CreateRibbonSeparator();
             this.ResizeIncreaseColumn = this.Factory.CreateRibbonButton();
             this.ResizeIncreaseRow = this.Factory.CreateRibbonButton();
-            this.FillWithR1C1 = this.Factory.CreateRibbonButton();
             this.GroupSystemOfLinearEquations.SuspendLayout();
             this.GroupRangeOffset.SuspendLayout();
             this.GroupSelection.SuspendLayout();
@@ -183,6 +183,12 @@
             this.TextualNumbersToNumbers.Name = "TextualNumbersToNumbers";
             this.TextualNumbersToNumbers.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.TextualNumbersToNumbers_Click);
             // 
+            // FillWithR1C1
+            // 
+            this.FillWithR1C1.Label = "Fill With R1C1";
+            this.FillWithR1C1.Name = "FillWithR1C1";
+            this.FillWithR1C1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.FillWithR1C1_Click);
+            // 
             // GroupView
             // 
             this.GroupView.Items.Add(this.FreezeReFreezePanes);
@@ -289,11 +295,6 @@
             this.ResizeIncreaseRow.Name = "ResizeIncreaseRow";
             this.ResizeIncreaseRow.ShowImage = true;
             this.ResizeIncreaseRow.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ResizeIncreaseRow_Click);
-            // 
-            // FillWithR1C1
-            // 
-            this.FillWithR1C1.Label = "Fill With R1C1";
-            this.FillWithR1C1.Name = "FillWithR1C1";
             // 
             // CPCustomization
             // 
