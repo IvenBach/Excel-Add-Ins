@@ -179,6 +179,15 @@ namespace ExcelAddIn1 {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No errors were found.
+        /// </summary>
+        internal static string SelectFormulaErrors_NoErrorsFound {
+            get {
+                return ResourceManager.GetString("SelectFormulaErrors_NoErrorsFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Structured Table References.
         /// </summary>
         internal static string StructuredTableReferences {

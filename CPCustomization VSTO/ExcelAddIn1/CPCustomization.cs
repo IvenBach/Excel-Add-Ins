@@ -213,5 +213,17 @@ namespace ExcelAddIn1
                 subArea.Value2 = subArea.Value2;
             }
         }
+
+        private void SelectFormulaErrors_Click(object sender, RibbonControlEventArgs e)
+        {
+            try
+            {
+                _currentSelection.SpecialCells(Excel.XlCellType.xlCellTypeFormulas, Excel.XlSpecialCellsValue.xlErrors).Select();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show(UI_Resources.SelectFormulaErrors_NoErrorsFound);
+            }
+        }
     }
 }

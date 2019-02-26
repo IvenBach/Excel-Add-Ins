@@ -50,6 +50,7 @@
             this.ListFromSelection = this.Factory.CreateRibbonButton();
             this.TextualNumbersToNumbers = this.Factory.CreateRibbonButton();
             this.FillWithR1C1 = this.Factory.CreateRibbonButton();
+            this.SelectFormulaErrors = this.Factory.CreateRibbonButton();
             this.GroupView = this.Factory.CreateRibbonGroup();
             this.FreezeReFreezePanes = this.Factory.CreateRibbonButton();
             this.UnFreezePanes = this.Factory.CreateRibbonButton();
@@ -146,6 +147,7 @@
             this.GroupSelection.Items.Add(this.ListFromSelection);
             this.GroupSelection.Items.Add(this.TextualNumbersToNumbers);
             this.GroupSelection.Items.Add(this.FillWithR1C1);
+            this.GroupSelection.Items.Add(this.SelectFormulaErrors);
             this.GroupSelection.Label = "Selection";
             this.GroupSelection.Name = "GroupSelection";
             // 
@@ -188,6 +190,13 @@
             this.FillWithR1C1.Label = "Fill With R1C1";
             this.FillWithR1C1.Name = "FillWithR1C1";
             this.FillWithR1C1.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.FillWithR1C1_Click);
+            // 
+            // SelectFormulaErrors
+            // 
+            this.SelectFormulaErrors.Label = "Select Formula Errors";
+            this.SelectFormulaErrors.Name = "SelectFormulaErrors";
+            this.SelectFormulaErrors.ShowImage = true;
+            this.SelectFormulaErrors.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.SelectFormulaErrors_Click);
             // 
             // GroupView
             // 
@@ -351,6 +360,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ResizeIncreaseColumn;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ResizeIncreaseRow;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton FillWithR1C1;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton SelectFormulaErrors;
     }
 
     partial class ThisRibbonCollection
