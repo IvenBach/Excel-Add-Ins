@@ -4,3 +4,4 @@ obj/
 # IDE Configuration
 .vs/
 .vscode/
+/COM Add-in/
