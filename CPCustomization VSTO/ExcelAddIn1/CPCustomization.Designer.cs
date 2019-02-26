@@ -63,6 +63,7 @@
             this.separator3 = this.Factory.CreateRibbonSeparator();
             this.ResizeIncreaseColumn = this.Factory.CreateRibbonButton();
             this.ResizeIncreaseRow = this.Factory.CreateRibbonButton();
+            this.FillWithR1C1 = this.Factory.CreateRibbonButton();
             this.GroupSystemOfLinearEquations.SuspendLayout();
             this.GroupRangeOffset.SuspendLayout();
             this.GroupSelection.SuspendLayout();
@@ -144,6 +145,7 @@
             this.GroupSelection.Items.Add(this.separator2);
             this.GroupSelection.Items.Add(this.ListFromSelection);
             this.GroupSelection.Items.Add(this.TextualNumbersToNumbers);
+            this.GroupSelection.Items.Add(this.FillWithR1C1);
             this.GroupSelection.Label = "Selection";
             this.GroupSelection.Name = "GroupSelection";
             // 
@@ -288,6 +290,11 @@
             this.ResizeIncreaseRow.ShowImage = true;
             this.ResizeIncreaseRow.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.ResizeIncreaseRow_Click);
             // 
+            // FillWithR1C1
+            // 
+            this.FillWithR1C1.Label = "Fill With R1C1";
+            this.FillWithR1C1.Name = "FillWithR1C1";
+            // 
             // CPCustomization
             // 
             this.Name = "CPCustomization";
@@ -342,6 +349,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonSeparator separator3;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ResizeIncreaseColumn;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ResizeIncreaseRow;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton FillWithR1C1;
     }
 
     partial class ThisRibbonCollection
