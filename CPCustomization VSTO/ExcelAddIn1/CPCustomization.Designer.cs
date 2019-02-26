@@ -41,21 +41,21 @@
             this.DisplayPageBreaks = this.Factory.CreateRibbonCheckBox();
             this.StructuredTableReferences = this.Factory.CreateRibbonCheckBox();
             this.GroupView = this.Factory.CreateRibbonGroup();
-            this.GroupSelection = this.Factory.CreateRibbonGroup();
-            this.separator2 = this.Factory.CreateRibbonSeparator();
-            this.GroupRangeOffset = this.Factory.CreateRibbonGroup();
-            this.separator1 = this.Factory.CreateRibbonSeparator();
-            this.GroupSystemOfLinearEquations = this.Factory.CreateRibbonGroup();
             this.FreezeReFreezePanes = this.Factory.CreateRibbonButton();
             this.UnFreezePanes = this.Factory.CreateRibbonButton();
+            this.GroupSelection = this.Factory.CreateRibbonGroup();
             this.AutoFitColumns = this.Factory.CreateRibbonButton();
             this.AutoFitRows = this.Factory.CreateRibbonButton();
+            this.separator2 = this.Factory.CreateRibbonSeparator();
             this.ListFromSelection = this.Factory.CreateRibbonButton();
             this.TextualNumbersToNumbers = this.Factory.CreateRibbonButton();
+            this.GroupRangeOffset = this.Factory.CreateRibbonGroup();
             this.offsetLeft = this.Factory.CreateRibbonButton();
             this.offsetUp = this.Factory.CreateRibbonButton();
+            this.separator1 = this.Factory.CreateRibbonSeparator();
             this.offsetRight = this.Factory.CreateRibbonButton();
             this.offsetDown = this.Factory.CreateRibbonButton();
+            this.GroupSystemOfLinearEquations = this.Factory.CreateRibbonGroup();
             this.SolveSystemOfLinearEquations = this.Factory.CreateRibbonButton();
             this.TabCPCustomization.SuspendLayout();
             this.GroupDisplay.SuspendLayout();
@@ -109,40 +109,6 @@
             this.GroupView.Label = "View";
             this.GroupView.Name = "GroupView";
             // 
-            // GroupSelection
-            // 
-            this.GroupSelection.Items.Add(this.AutoFitColumns);
-            this.GroupSelection.Items.Add(this.AutoFitRows);
-            this.GroupSelection.Items.Add(this.separator2);
-            this.GroupSelection.Items.Add(this.ListFromSelection);
-            this.GroupSelection.Items.Add(this.TextualNumbersToNumbers);
-            this.GroupSelection.Label = "Selection";
-            this.GroupSelection.Name = "GroupSelection";
-            // 
-            // separator2
-            // 
-            this.separator2.Name = "separator2";
-            // 
-            // GroupRangeOffset
-            // 
-            this.GroupRangeOffset.Items.Add(this.offsetLeft);
-            this.GroupRangeOffset.Items.Add(this.offsetUp);
-            this.GroupRangeOffset.Items.Add(this.separator1);
-            this.GroupRangeOffset.Items.Add(this.offsetRight);
-            this.GroupRangeOffset.Items.Add(this.offsetDown);
-            this.GroupRangeOffset.Label = "Range Offset";
-            this.GroupRangeOffset.Name = "GroupRangeOffset";
-            // 
-            // separator1
-            // 
-            this.separator1.Name = "separator1";
-            // 
-            // GroupSystemOfLinearEquations
-            // 
-            this.GroupSystemOfLinearEquations.Items.Add(this.SolveSystemOfLinearEquations);
-            this.GroupSystemOfLinearEquations.Label = "System of Linear Equations";
-            this.GroupSystemOfLinearEquations.Name = "GroupSystemOfLinearEquations";
-            // 
             // FreezeReFreezePanes
             // 
             this.FreezeReFreezePanes.Label = "Freeze Panes";
@@ -158,6 +124,16 @@
             this.UnFreezePanes.OfficeImageId = "FreezePanes";
             this.UnFreezePanes.ShowImage = true;
             this.UnFreezePanes.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.UnFreezePanes_Click);
+            // 
+            // GroupSelection
+            // 
+            this.GroupSelection.Items.Add(this.AutoFitColumns);
+            this.GroupSelection.Items.Add(this.AutoFitRows);
+            this.GroupSelection.Items.Add(this.separator2);
+            this.GroupSelection.Items.Add(this.ListFromSelection);
+            this.GroupSelection.Items.Add(this.TextualNumbersToNumbers);
+            this.GroupSelection.Label = "Selection";
+            this.GroupSelection.Name = "GroupSelection";
             // 
             // AutoFitColumns
             // 
@@ -177,6 +153,10 @@
             this.AutoFitRows.ShowImage = true;
             this.AutoFitRows.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.AutoFitRows_Click);
             // 
+            // separator2
+            // 
+            this.separator2.Name = "separator2";
+            // 
             // ListFromSelection
             // 
             this.ListFromSelection.Label = "Create List From Selection";
@@ -188,6 +168,16 @@
             this.TextualNumbersToNumbers.Label = "TextNumbers to Numbers";
             this.TextualNumbersToNumbers.Name = "TextualNumbersToNumbers";
             this.TextualNumbersToNumbers.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.TextualNumbersToNumbers_Click);
+            // 
+            // GroupRangeOffset
+            // 
+            this.GroupRangeOffset.Items.Add(this.offsetLeft);
+            this.GroupRangeOffset.Items.Add(this.offsetUp);
+            this.GroupRangeOffset.Items.Add(this.separator1);
+            this.GroupRangeOffset.Items.Add(this.offsetRight);
+            this.GroupRangeOffset.Items.Add(this.offsetDown);
+            this.GroupRangeOffset.Label = "Range Offset";
+            this.GroupRangeOffset.Name = "GroupRangeOffset";
             // 
             // offsetLeft
             // 
@@ -207,6 +197,10 @@
             this.offsetUp.ShowImage = true;
             this.offsetUp.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.OffsetUp_Click);
             // 
+            // separator1
+            // 
+            this.separator1.Name = "separator1";
+            // 
             // offsetRight
             // 
             this.offsetRight.Image = ((System.Drawing.Image)(resources.GetObject("offsetRight.Image")));
@@ -224,6 +218,12 @@
             this.offsetDown.Name = "offsetDown";
             this.offsetDown.ShowImage = true;
             this.offsetDown.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.OffsetDown_Click);
+            // 
+            // GroupSystemOfLinearEquations
+            // 
+            this.GroupSystemOfLinearEquations.Items.Add(this.SolveSystemOfLinearEquations);
+            this.GroupSystemOfLinearEquations.Label = "System of Linear Equations";
+            this.GroupSystemOfLinearEquations.Name = "GroupSystemOfLinearEquations";
             // 
             // SolveSystemOfLinearEquations
             // 

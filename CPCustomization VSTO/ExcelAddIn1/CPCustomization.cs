@@ -103,7 +103,7 @@ namespace ExcelAddIn1
 
             xlApplication.ReferenceStyle = checkBox.Checked
                 ? XL.XlReferenceStyle.xlR1C1
-                : XL.XlReferenceStyle.xlR1C1;
+                : XL.XlReferenceStyle.xlA1;
         }
 
         private void DisplayPageBreaks_Click(object sender, RibbonControlEventArgs e)

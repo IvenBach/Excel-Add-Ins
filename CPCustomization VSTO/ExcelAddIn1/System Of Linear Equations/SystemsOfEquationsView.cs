@@ -12,6 +12,8 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
         private readonly Color _defaultForeColor = Color.Black;
         private readonly Color _alertForeColor = Color.Red;
 
+        private const int RangeSelectionConst = 8;
+
         public SystemsOfEquationsView(SystemsOfEquationsPresenter presenter)
         {
             InitializeComponent();
@@ -60,7 +62,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
         {
             Hide();
 
-            dynamic unsafeCoefficientMatrix = Globals.ThisAddIn.Application.InputBox("Select coefficient matrix range", "Coefficient Matrix", Type: 8);
+            dynamic unsafeCoefficientMatrix = Globals.ThisAddIn.Application.InputBox("Select coefficient matrix range", "Coefficient Matrix", Type: RangeSelectionConst);
             if (unsafeCoefficientMatrix is XL.Range)
             {
                 Presenter.Model.CoefficientMatrix = unsafeCoefficientMatrix;
@@ -78,7 +80,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
         {
             Hide();
 
-            dynamic unsafeRHSVector = Globals.ThisAddIn.Application.InputBox("Select answer vector", "Answer vector", Type: 8);
+            dynamic unsafeRHSVector = Globals.ThisAddIn.Application.InputBox("Select answer vector", "Answer vector", Type: RangeSelectionConst);
             if (unsafeRHSVector is XL.Range)
             {
                 Presenter.Model.AnswerVector = unsafeRHSVector;
@@ -96,7 +98,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
         {
             Hide();
 
-            dynamic unsafeInverceCoefficient = Globals.ThisAddIn.Application.InputBox("Select coefficient matrix", "Coefficient matrix", Type: 8);
+            dynamic unsafeInverceCoefficient = Globals.ThisAddIn.Application.InputBox("Select coefficient matrix", "Coefficient matrix", Type: RangeSelectionConst);
             if (unsafeInverceCoefficient is XL.Range)
             {
                 Presenter.Model.InverseCoefficientMatrix = unsafeInverceCoefficient;
@@ -114,7 +116,7 @@ namespace ExcelAddIn1.System_Of_Linear_Equations
         {
             Hide();
 
-            dynamic unsafeSolutionVector = Globals.ThisAddIn.Application.InputBox("Select solution vector", "Solution vector", Type: 8);
+            dynamic unsafeSolutionVector = Globals.ThisAddIn.Application.InputBox("Select solution vector", "Solution vector", Type: RangeSelectionConst);
             if (unsafeSolutionVector is XL.Range)
             {
                 Presenter.Model.SolutionVector = unsafeSolutionVector;
