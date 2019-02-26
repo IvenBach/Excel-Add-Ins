@@ -22,78 +22,22 @@ namespace ExcelAddIn1
 
         private void OffsetLeft_Click(object sender, RibbonControlEventArgs e)
         {
-            var selection = _currentSelection;
-            if (IsSelectedCellsOnBoundaryOfWorksheet(selection, OffsetDirection.Left))
-            {
-                return;
-            }
-
-            selection.Offset[0, -1].Select();
+            Offset.Left(xlApplication, _currentSelection);
         }
 
         private void OffsetUp_Click(object sender, RibbonControlEventArgs e)
         {
-            var selection = _currentSelection;
-            if (IsSelectedCellsOnBoundaryOfWorksheet(selection, OffsetDirection.Up))
-            {
-                return;
-            }
-
-            selection.Offset[-1, 0].Select();
+            Offset.Up(xlApplication, _currentSelection);
         }
 
         private void OffsetDown_Click(object sender, RibbonControlEventArgs e)
         {
-            var selection = _currentSelection;
-            if (IsSelectedCellsOnBoundaryOfWorksheet(selection,  OffsetDirection.Down))
-            {
-                return;
-            }
-
-            selection.Offset[1, 0].Select();
+            Offset.Down(xlApplication, _currentSelection);
         }
 
         private void OffsetRight_Click(object sender, RibbonControlEventArgs e)
         {
-            var selection = _currentSelection;
-            if (IsSelectedCellsOnBoundaryOfWorksheet(selection, OffsetDirection.Right))
-            {
-                return;
-            }
-
-            selection.Offset[0, 1].Select();
-        }
-
-        private bool IsSelectedCellsOnBoundaryOfWorksheet(Excel.Range selection, OffsetDirection direction)
-        {
-            foreach (Excel.Range subArea in selection.Areas)
-            {
-                if (direction == OffsetDirection.Left
-                    && subArea.Column == 1)
-                {
-                    return true;
-                }
-
-                if (direction == OffsetDirection.Right
-                    && subArea.Column + subArea.Columns.Count - 1 == xlApplication.Columns.Count)
-                {
-                    return true;
-                }
-
-                if (direction == OffsetDirection.Up
-                    && subArea.Row == 1)
-                {
-                    return true;
-                }
-
-                if (direction == OffsetDirection.Down
-                    && subArea.Row + subArea.Rows.Count - 1 == xlApplication.Rows.Count)
-                {
-                    return true;
-                }
-            }
-
-            return false;
+            Offset.Right(xlApplication, _currentSelection);
         }
 
         private Excel.Range _currentSelection => CurrentSelection.RangeSelection(xlApplication);
@@ -231,14 +175,6 @@ namespace ExcelAddIn1
                     cell.Value2 = numericNumber;
                 }
             }
-        }
-
-        private enum OffsetDirection
-        {
-            Left,
-            Right,
-            Up,
-            Down
         }
 
         private System_Of_Linear_Equations.SystemsOfEquationsPresenter presenter = new System_Of_Linear_Equations.SystemsOfEquationsPresenter();
