@@ -22,7 +22,7 @@ namespace ExcelAddIn1
 
         private void OffsetLeft_Click(object sender, RibbonControlEventArgs e)
         {
-            var selection = CurrentSelection;
+            var selection = _currentSelection;
             if (IsSelectedCellsOnBoundaryOfWorksheet(selection, OffsetDirection.Left))
             {
                 return;
@@ -33,7 +33,7 @@ namespace ExcelAddIn1
 
         private void OffsetUp_Click(object sender, RibbonControlEventArgs e)
         {
-            var selection = CurrentSelection;
+            var selection = _currentSelection;
             if (IsSelectedCellsOnBoundaryOfWorksheet(selection, OffsetDirection.Up))
             {
                 return;
@@ -44,7 +44,7 @@ namespace ExcelAddIn1
 
         private void OffsetDown_Click(object sender, RibbonControlEventArgs e)
         {
-            var selection = CurrentSelection;
+            var selection = _currentSelection;
             if (IsSelectedCellsOnBoundaryOfWorksheet(selection,  OffsetDirection.Down))
             {
                 return;
@@ -55,7 +55,7 @@ namespace ExcelAddIn1
 
         private void OffsetRight_Click(object sender, RibbonControlEventArgs e)
         {
-            var selection = CurrentSelection;
+            var selection = _currentSelection;
             if (IsSelectedCellsOnBoundaryOfWorksheet(selection, OffsetDirection.Right))
             {
                 return;
@@ -96,7 +96,7 @@ namespace ExcelAddIn1
             return false;
         }
 
-        private Excel.Range CurrentSelection => xlApplication.ActiveWindow.RangeSelection;
+        private Excel.Range _currentSelection => CurrentSelection.RangeSelection(xlApplication);
         
         private void R1C1ReferenceStyle_Click(object sender, RibbonControlEventArgs e)
         {
@@ -140,17 +140,17 @@ namespace ExcelAddIn1
 
         private void AutoFitColumns_Click(object sender, RibbonControlEventArgs e)
         {
-            CurrentSelection.Columns.AutoFit();
+            _currentSelection.Columns.AutoFit();
         }
 
         private void AutoFitRows_Click(object sender, RibbonControlEventArgs e)
         {
-            CurrentSelection.Rows.AutoFit();
+            _currentSelection.Rows.AutoFit();
         }
 
         private void ListFromSelection_Click(object sender, RibbonControlEventArgs e)
         {
-            var uniqueValues = UniqueCellValues(CurrentSelection);
+            var uniqueValues = UniqueCellValues(_currentSelection);
 
             if (!uniqueValues.Any())
             {
@@ -198,7 +198,7 @@ namespace ExcelAddIn1
 
         private void TextualNumbersToNumbers_Click(object sender, RibbonControlEventArgs e)
         {
-            foreach (Excel.Range subArea in CurrentSelection.Areas)
+            foreach (Excel.Range subArea in _currentSelection.Areas)
             {
                 ConvertToNumber(subArea);
             }
