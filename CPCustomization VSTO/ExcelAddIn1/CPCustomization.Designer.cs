@@ -55,11 +55,14 @@
             this.separator1 = this.Factory.CreateRibbonSeparator();
             this.offsetRight = this.Factory.CreateRibbonButton();
             this.offsetDown = this.Factory.CreateRibbonButton();
+            this.GroupSystemOfLinearEquations = this.Factory.CreateRibbonGroup();
+            this.SolveSystemOfLinearEquations = this.Factory.CreateRibbonButton();
             this.TabCPCustomization.SuspendLayout();
             this.GroupDisplay.SuspendLayout();
             this.GroupView.SuspendLayout();
             this.GroupSelection.SuspendLayout();
             this.GroupRangeOffset.SuspendLayout();
+            this.GroupSystemOfLinearEquations.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabCPCustomization
@@ -68,6 +71,7 @@
             this.TabCPCustomization.Groups.Add(this.GroupView);
             this.TabCPCustomization.Groups.Add(this.GroupSelection);
             this.TabCPCustomization.Groups.Add(this.GroupRangeOffset);
+            this.TabCPCustomization.Groups.Add(this.GroupSystemOfLinearEquations);
             this.TabCPCustomization.KeyTip = "CPC";
             this.TabCPCustomization.Label = "CPCustomization";
             this.TabCPCustomization.Name = "TabCPCustomization";
@@ -215,6 +219,21 @@
             this.offsetDown.ShowImage = true;
             this.offsetDown.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.OffsetDown_Click);
             // 
+            // GroupSystemOfLinearEquations
+            // 
+            this.GroupSystemOfLinearEquations.Items.Add(this.SolveSystemOfLinearEquations);
+            this.GroupSystemOfLinearEquations.Label = "System of Linear Equations";
+            this.GroupSystemOfLinearEquations.Name = "GroupSystemOfLinearEquations";
+            // 
+            // SolveSystemOfLinearEquations
+            // 
+            this.SolveSystemOfLinearEquations.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge;
+            this.SolveSystemOfLinearEquations.Image = ((System.Drawing.Image)(resources.GetObject("SolveSystemOfLinearEquations.Image")));
+            this.SolveSystemOfLinearEquations.Label = "Solve System";
+            this.SolveSystemOfLinearEquations.Name = "SolveSystemOfLinearEquations";
+            this.SolveSystemOfLinearEquations.ShowImage = true;
+            this.SolveSystemOfLinearEquations.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.SolveSystemOfLinearEquations_Click);
+            // 
             // CPCustomization
             // 
             this.Name = "CPCustomization";
@@ -231,6 +250,8 @@
             this.GroupSelection.PerformLayout();
             this.GroupRangeOffset.ResumeLayout(false);
             this.GroupRangeOffset.PerformLayout();
+            this.GroupSystemOfLinearEquations.ResumeLayout(false);
+            this.GroupSystemOfLinearEquations.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -257,6 +278,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonSeparator separator2;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton ListFromSelection;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton TextualNumbersToNumbers;
+        internal Microsoft.Office.Tools.Ribbon.RibbonGroup GroupSystemOfLinearEquations;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton SolveSystemOfLinearEquations;
     }
 
     partial class ThisRibbonCollection
